@@ -212,6 +212,25 @@ namespace dateimodifyer
 
         }
 
+        private void tsMenuFolderInfo_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folder = new FolderBrowserDialog();
+            folder.Description = "Wähle einen Ordner aus.";
+            folder.ShowNewFolderButton = false;
+            if(folder.ShowDialog() == DialogResult.OK)
+            {
+                String getErDatum = "\nErstellt am: " + Directory.GetCreationTime(folder.SelectedPath).ToString();
+                String getZugDatum = "\nLetzter Zugriff: " + Directory.GetLastAccessTime(folder.SelectedPath).ToString();
+                String getGeAendert = "\nZuletzt geändert: " + Directory.GetLastWriteTime(folder.SelectedPath).ToString();
+                MessageBox.Show(textBox1.Text + getErDatum + getZugDatum + getGeAendert + "\n Aktuelles Datum: " + textBox2.Text + "\n Aktuelle Uhrzeit: " + textBox3.Text, "Ordnerinformation");
+            }
+        }
 
-    }
-}
+        private void tsMenuBeenden_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+    }//end class
+}//end namespace
