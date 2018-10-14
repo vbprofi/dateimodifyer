@@ -1,0 +1,4 @@
+#Ignore Folder
+.vs/**/* 
+dateimodifyer/bin/*
+dateimodifyer/obj/*
