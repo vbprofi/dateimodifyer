@@ -41,11 +41,13 @@
             this.button4 = new System.Windows.Forms.Button();
             this.MenuMain = new System.Windows.Forms.MenuStrip();
             this.tsMenuDatei = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMenuBeenden = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMenuOrdner = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMenuFolderInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMenuFragezeichen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMenuInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsMenuBeenden = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsMenuFolderInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsMenuChangeCreateDate = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -167,13 +169,30 @@
             this.tsMenuDatei.Size = new System.Drawing.Size(65, 29);
             this.tsMenuDatei.Text = "&Datei";
             // 
+            // tsMenuBeenden
+            // 
+            this.tsMenuBeenden.Name = "tsMenuBeenden";
+            this.tsMenuBeenden.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.tsMenuBeenden.Size = new System.Drawing.Size(252, 30);
+            this.tsMenuBeenden.Text = "&Beenden";
+            this.tsMenuBeenden.Click += new System.EventHandler(this.tsMenuBeenden_Click);
+            // 
             // tsMenuOrdner
             // 
             this.tsMenuOrdner.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsMenuFolderInfo});
+            this.tsMenuFolderInfo,
+            this.toolStripSeparator1,
+            this.tsMenuChangeCreateDate});
             this.tsMenuOrdner.Name = "tsMenuOrdner";
             this.tsMenuOrdner.Size = new System.Drawing.Size(80, 29);
             this.tsMenuOrdner.Text = "&Ordner";
+            // 
+            // tsMenuFolderInfo
+            // 
+            this.tsMenuFolderInfo.Name = "tsMenuFolderInfo";
+            this.tsMenuFolderInfo.Size = new System.Drawing.Size(293, 30);
+            this.tsMenuFolderInfo.Text = "Ordner&information";
+            this.tsMenuFolderInfo.Click += new System.EventHandler(this.tsMenuFolderInfo_Click);
             // 
             // tsMenuFragezeichen
             // 
@@ -189,20 +208,17 @@
             this.tsMenuInfo.Size = new System.Drawing.Size(252, 30);
             this.tsMenuInfo.Text = "&Info";
             // 
-            // tsMenuBeenden
+            // toolStripSeparator1
             // 
-            this.tsMenuBeenden.Name = "tsMenuBeenden";
-            this.tsMenuBeenden.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.tsMenuBeenden.Size = new System.Drawing.Size(252, 30);
-            this.tsMenuBeenden.Text = "&Beenden";
-            this.tsMenuBeenden.Click += new System.EventHandler(this.tsMenuBeenden_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(290, 6);
             // 
-            // tsMenuFolderInfo
+            // tsMenuChangeCreateDate
             // 
-            this.tsMenuFolderInfo.Name = "tsMenuFolderInfo";
-            this.tsMenuFolderInfo.Size = new System.Drawing.Size(252, 30);
-            this.tsMenuFolderInfo.Text = "Ordner&information";
-            this.tsMenuFolderInfo.Click += new System.EventHandler(this.tsMenuFolderInfo_Click);
+            this.tsMenuChangeCreateDate.Name = "tsMenuChangeCreateDate";
+            this.tsMenuChangeCreateDate.Size = new System.Drawing.Size(293, 30);
+            this.tsMenuChangeCreateDate.Text = "&Erstellungsdatum ändern";
+            this.tsMenuChangeCreateDate.Click += new System.EventHandler(this.tsMenuChangeCreateDate_Click);
             // 
             // Form1
             // 
@@ -252,6 +268,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsMenuFolderInfo;
         private System.Windows.Forms.ToolStripMenuItem tsMenuFragezeichen;
         private System.Windows.Forms.ToolStripMenuItem tsMenuInfo;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem tsMenuChangeCreateDate;
     }
 }
 

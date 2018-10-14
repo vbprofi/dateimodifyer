@@ -15,8 +15,8 @@ namespace dateimodifyer
 {
     public partial class Form1 : Form
     {
-
-        static String iniFilePath = "config.ini";
+        String folderpath;
+                static String iniFilePath = "config.ini";
         String iniMainSection = "Main";
         String iniKey = "LastFile";
         String iniValue = "";
@@ -217,11 +217,12 @@ namespace dateimodifyer
             FolderBrowserDialog folder = new FolderBrowserDialog();
             folder.Description = "Wähle einen Ordner aus.";
             folder.ShowNewFolderButton = false;
-            if(folder.ShowDialog() == DialogResult.OK)
+            if (folder.ShowDialog() == DialogResult.OK)
             {
                 String getErDatum = "\nErstellt am: " + Directory.GetCreationTime(folder.SelectedPath).ToString();
                 String getZugDatum = "\nLetzter Zugriff: " + Directory.GetLastAccessTime(folder.SelectedPath).ToString();
                 String getGeAendert = "\nZuletzt geändert: " + Directory.GetLastWriteTime(folder.SelectedPath).ToString();
+                folderpath = folder.SelectedPath;
                 MessageBox.Show(textBox1.Text + getErDatum + getZugDatum + getGeAendert + "\n Aktuelles Datum: " + textBox2.Text + "\n Aktuelle Uhrzeit: " + textBox3.Text, "Ordnerinformation");
             }
         }
@@ -230,6 +231,32 @@ namespace dateimodifyer
         {
             Application.Exit();
         }
+
+        private void tsMenuChangeCreateDate_Click(object sender, EventArgs e)
+        {
+            if (folderpath.Length <= 0)
+            {
+                FolderBrowserDialog folder = new FolderBrowserDialog();
+                folder.Description = "Wähle einen Ordner.";
+                folder.ShowNewFolderButton = false;
+                if (folder.ShowDialog() == DialogResult.OK) folderpath = folder.SelectedPath;
+            }
+                
+            //Erstellt am
+            try
+            {
+                String getErDatum = "\nErstellt am: " + File.GetCreationTime(textBox1.Text).ToString();
+                String getZugDatum = "\nLetzter Zugriff: " + Directory.GetLastAccessTime(folderpath).ToString();
+                String getGeAendert = "\nZuletzt geändert: " + Directory.GetLastWriteTime(folderpath).ToString();
+                MessageBox.Show(folderpath + getErDatum + getZugDatum + getGeAendert + "\n Aktuelles Datum: " + textBox2.Text + "\n Aktuelle Uhrzeit: " + textBox3.Text, "Erstellungsdatum geändert");
+
+                Directory.SetCreationTime(folderpath, DateTime.Parse(textBox2.Text + " " + textBox3.Text));
+                            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Fehler!");
+            }
+}
 
 
     }//end class
