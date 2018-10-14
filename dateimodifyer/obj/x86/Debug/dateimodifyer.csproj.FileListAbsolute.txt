@@ -1,0 +1,8 @@
+c:\users\homepc\documents\visual studio 2010\Projects\dateimodifyer\dateimodifyer\bin\Debug\dateimodifyer.exe
+c:\users\homepc\documents\visual studio 2010\Projects\dateimodifyer\dateimodifyer\bin\Debug\dateimodifyer.pdb
+c:\users\homepc\documents\visual studio 2010\Projects\dateimodifyer\dateimodifyer\obj\x86\Debug\dateimodifyer.Form1.resources
+c:\users\homepc\documents\visual studio 2010\Projects\dateimodifyer\dateimodifyer\obj\x86\Debug\dateimodifyer.Properties.Resources.resources
+c:\users\homepc\documents\visual studio 2010\Projects\dateimodifyer\dateimodifyer\obj\x86\Debug\dateimodifyer.csproj.GenerateResource.Cache
+c:\users\homepc\documents\visual studio 2010\Projects\dateimodifyer\dateimodifyer\obj\x86\Debug\dateimodifyer.exe
+c:\users\homepc\documents\visual studio 2010\Projects\dateimodifyer\dateimodifyer\obj\x86\Debug\dateimodifyer.pdb
+C:\Users\homepc\Documents\Visual Studio 2010\Projects\dateimodifyer\dateimodifyer\obj\x86\Debug\dateimodifyer.csprojResolveAssemblyReference.cache
