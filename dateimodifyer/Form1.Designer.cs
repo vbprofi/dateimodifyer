@@ -44,10 +44,12 @@
             this.tsMenuBeenden = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMenuOrdner = new System.Windows.Forms.ToolStripMenuItem();
             this.tsMenuFolderInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsMenuFragezeichen = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsMenuInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsMenuChangeCreateDate = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMenuFragezeichen = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMenuInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMenuChangeEditDate = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsMenuChangeLastOpenDate = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,7 +184,9 @@
             this.tsMenuOrdner.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsMenuFolderInfo,
             this.toolStripSeparator1,
-            this.tsMenuChangeCreateDate});
+            this.tsMenuChangeCreateDate,
+            this.tsMenuChangeEditDate,
+            this.tsMenuChangeLastOpenDate});
             this.tsMenuOrdner.Name = "tsMenuOrdner";
             this.tsMenuOrdner.Size = new System.Drawing.Size(80, 29);
             this.tsMenuOrdner.Text = "&Ordner";
@@ -190,9 +194,21 @@
             // tsMenuFolderInfo
             // 
             this.tsMenuFolderInfo.Name = "tsMenuFolderInfo";
-            this.tsMenuFolderInfo.Size = new System.Drawing.Size(293, 30);
+            this.tsMenuFolderInfo.Size = new System.Drawing.Size(295, 30);
             this.tsMenuFolderInfo.Text = "Ordner&information";
             this.tsMenuFolderInfo.Click += new System.EventHandler(this.tsMenuFolderInfo_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(193, 6);
+            // 
+            // tsMenuChangeCreateDate
+            // 
+            this.tsMenuChangeCreateDate.Name = "tsMenuChangeCreateDate";
+            this.tsMenuChangeCreateDate.Size = new System.Drawing.Size(295, 30);
+            this.tsMenuChangeCreateDate.Text = "&Erstellungsdatum ändern";
+            this.tsMenuChangeCreateDate.Click += new System.EventHandler(this.tsMenuChangeCreateDate_Click);
             // 
             // tsMenuFragezeichen
             // 
@@ -208,17 +224,19 @@
             this.tsMenuInfo.Size = new System.Drawing.Size(252, 30);
             this.tsMenuInfo.Text = "&Info";
             // 
-            // toolStripSeparator1
+            // tsMenuChangeEditDate
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(290, 6);
+            this.tsMenuChangeEditDate.Name = "tsMenuChangeEditDate";
+            this.tsMenuChangeEditDate.Size = new System.Drawing.Size(295, 30);
+            this.tsMenuChangeEditDate.Text = "&Änderungsdatum ändern";
+            this.tsMenuChangeEditDate.Click += new System.EventHandler(this.tsMenuChangeEditDate_Click);
             // 
-            // tsMenuChangeCreateDate
+            // tsMenuChangeLastOpenDate
             // 
-            this.tsMenuChangeCreateDate.Name = "tsMenuChangeCreateDate";
-            this.tsMenuChangeCreateDate.Size = new System.Drawing.Size(293, 30);
-            this.tsMenuChangeCreateDate.Text = "&Erstellungsdatum ändern";
-            this.tsMenuChangeCreateDate.Click += new System.EventHandler(this.tsMenuChangeCreateDate_Click);
+            this.tsMenuChangeLastOpenDate.Name = "tsMenuChangeLastOpenDate";
+            this.tsMenuChangeLastOpenDate.Size = new System.Drawing.Size(295, 30);
+            this.tsMenuChangeLastOpenDate.Text = "Letzten &Zugriff ändern";
+            this.tsMenuChangeLastOpenDate.Click += new System.EventHandler(this.tsMenuChangeLastOpenDate_Click);
             // 
             // Form1
             // 
@@ -270,6 +288,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsMenuInfo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem tsMenuChangeCreateDate;
+        private System.Windows.Forms.ToolStripMenuItem tsMenuChangeEditDate;
+        private System.Windows.Forms.ToolStripMenuItem tsMenuChangeLastOpenDate;
     }
 }
 
